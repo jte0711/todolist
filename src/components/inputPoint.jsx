@@ -17,10 +17,21 @@ class InputPoint extends React.Component{
     });
   }
 
-  handleSubmit(event){
+  // handleSubmit(e){
+  //   e.preventDefault();
+  //   e.target.reset();
+  //   console.log(this.state);
+  //   this.props.handleSubmit(this.state.newText);
+  // }
+
+  handleSubmit(e){
+    e.preventDefault();
+    e.target.reset();
+    console.log("working");
     axios.post('https://todolist-backend123.herokuapp.com/submit', this.state)
     .then((res)=>{
-      console.log(res);
+      console.log("calling get");
+      this.props.callGet();
     }).catch((err)=>{
       console.log(err);
     });
