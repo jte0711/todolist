@@ -10,7 +10,7 @@ class PointList extends React.Component{
 
   componentDidMount(){
     console.log("pointlist did mount");
-    this.props.callGet();
+    // this.props.callGet();
   }
 
   componentDidUpdate(){
