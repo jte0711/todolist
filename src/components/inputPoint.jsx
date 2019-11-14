@@ -1,6 +1,6 @@
 import React from 'react';
 
-const backEndUrl = process.env.REACT_APP_LOCAL;
+// const backEndUrl = process.env.REACT_APP_LOCAL;
 
 class InputPoint extends React.Component{
   constructor(props){
@@ -21,7 +21,7 @@ class InputPoint extends React.Component{
   handleSubmit(e){
     e.preventDefault();
     e.target.reset();
-    console.log(this.state);
+    // console.log(this.state);
     this.props.handleSubmit(this.state.newText);
   }
 

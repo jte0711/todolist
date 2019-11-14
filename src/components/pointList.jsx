@@ -9,12 +9,12 @@ class PointList extends React.Component{
   }
 
   componentDidMount(){
-    console.log("pointlist did mount");
+    // console.log("pointlist did mount");
     // this.props.callGet();
   }
 
   componentDidUpdate(){
-    console.log("pointlist update");
+    // console.log("pointlist update");
   }
 
   handleClick(idx){
@@ -22,7 +22,7 @@ class PointList extends React.Component{
   }
 
   createPoints(){
-    console.log("creating points");
+    // console.log("creating points");
     let propsList = this.props.todoList;
     let htmlTags = [];
 
@@ -33,7 +33,7 @@ class PointList extends React.Component{
   }
 
   render(){
-    console.log("pointlist render");
+    // console.log("pointlist render");
     return(
       <div className="pointList">
         {this.createPoints()}

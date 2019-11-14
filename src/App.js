@@ -1,11 +1,11 @@
 import React from 'react';
-import axios from 'axios';
-import logo from './logo.svg';
+// import axios from 'axios';
+// import logo from './logo.svg';
 import PointList from './components/pointList';
 import InputPoint from './components/inputPoint';
 import './App.css';
 
-const backEndUrl = process.env.REACT_APP_LOCAL;
+// const backEndUrl = process.env.REACT_APP_LOCAL;
 
 class App extends React.Component {
 
@@ -50,14 +50,14 @@ class App extends React.Component {
   }
 
   callGet(){
-    console.log("callGet");
+    // console.log("callGet");
     let temp = [];
     let keys = Object.keys(localStorage);
     let contentArr = JSON.parse(localStorage.getItem(keys)).list;
-    console.log(localStorage);
-    console.log(contentArr);
+    // console.log(localStorage);
+    // console.log(contentArr);
     temp = contentArr;
-    console.log(temp);
+    // console.log(temp);
     this.setState({
       todos: temp
     });
@@ -135,7 +135,7 @@ class App extends React.Component {
   // }
 
   handleSubmit(text){
-    console.log("test)");
+    // console.log("test)");
     let newVal = {
       value: text,
       done: false,
@@ -152,8 +152,8 @@ class App extends React.Component {
   }
   
   render(){
-    console.log("app render");
-    console.log("this is the state ", this.state.todos);
+    // console.log("app render");
+    // console.log("this is the state ", this.state.todos);
     return (
       <div className="todolist">
         {/* <PointList todoList={this.state.todos} removePoint={this.removePoint} toggleCheckbox={this.toggleCheckbox} callGet={this.callGet}/>

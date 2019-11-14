@@ -9,15 +9,15 @@ class Point extends React.Component {
   }
 
   componentDidUpdate(){
-    console.log("point called did update");
+    // console.log("point called did update");
   }
 
   componentDidMount(){
-    console.log("point called did mount");
+    // console.log("point called did mount");
   }
 
   handleChange(e){
-    console.log("this is pointId type ", typeof this.props.pointId);
+    // console.log("this is pointId type ", typeof this.props.pointId);
     if (e.target.checked === true && this.props.todoDetails.done !== true){
       this.props.toggleCheckbox(this.props.pointId, true);   
     } else if (e.target.checked === false && this.props.todoDetails.done !== false) {
@@ -36,7 +36,7 @@ class Point extends React.Component {
 
   render(){
 
-    console.log("point update");
+    // console.log("point update");
 
     let prop = this.props;
     let wordStyle, cbChecked;
@@ -59,9 +59,9 @@ class Point extends React.Component {
           <input onChange={this.handleChange} className="inputCheckbox" type="checkbox" checked={cbChecked}/>
           <span className="checkmark"></span>
           {prop.todoDetails.value}
+          <a href="#" className="close" onClick={this.handleClick}></a>
         </label>
         {/* <button type="button" onClick={this.handleClick}>X</button> */}
-        <a href="#" className="close" onClick={this.handleClick}></a>
       </div>
     );
   }
