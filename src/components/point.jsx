@@ -51,11 +51,17 @@ class Point extends React.Component {
 
     return(
       <div style={{display: prop.todoDetails.display}} className="point justify-content-between align-items-center">
-        <label style={wordStyle} className="checkbox">
+        {/* <label style={wordStyle} className="checkbox">
           <input onChange={this.handleChange} ref={"ref_" + prop.pointId} className="inputCheckbox" type="checkbox" checked={cbChecked}/>
           {prop.todoDetails.value}
+        </label> */}
+        <label style={wordStyle} className="container checkbox">
+          <input onChange={this.handleChange} className="inputCheckbox" type="checkbox" checked={cbChecked}/>
+          <span className="checkmark"></span>
+          {prop.todoDetails.value}
         </label>
-        <button type="button" onClick={this.handleClick}>X</button>
+        {/* <button type="button" onClick={this.handleClick}>X</button> */}
+        <a href="#" className="close" onClick={this.handleClick}></a>
       </div>
     );
   }
